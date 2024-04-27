@@ -6,9 +6,11 @@
 /*   By: Habouda <Habouda@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/25 05:05:11 by Habouda           #+#    #+#             */
-/*   Updated: 2024/04/25 05:06:18 by Habouda          ###   ########.fr       */
+/*   Updated: 2024/04/27 23:20:55 by Habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strlen(char *str)
 {
