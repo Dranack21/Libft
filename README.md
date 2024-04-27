@@ -1,3 +1,3 @@
 # Libft
 42 Libft Project
-![Project Logo](libft.png)
+![Project Logo](Libft.png)
