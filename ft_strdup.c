@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:47:18 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/16 16:55:26 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/16 17:13:31 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strdup(const char *source)
 
 	i = ft_strlen(source);
 	buffer = malloc(i * sizeof(char) + 1);
+	if (!buffer)
+		return (NULL);
 	i = 0;
 	while (source[i])
 	{
