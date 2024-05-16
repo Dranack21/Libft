@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: Habouda <Habouda@student.42.fr>            +#+  +:+       +#+         #
+#    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/04/25 04:45:09 by Habouda          ###   ########.fr        #
+#    Updated: 2024/05/16 16:05:00 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRCS	=	ft_isalpha.c \
 		ft_isalnum.c \
 		ft_isascii.c \
 		ft_isprint.c \
-		ft_strlen.c \
+		ft_strlen.c
+ \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
@@ -51,6 +52,12 @@ SRCS_BONUS	=	ft_lstnew.c \
 			
 OBJS	= $(SRCS:.c=.o)
 OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
+
+
+COMPIL = $(CC) $(CFLAGS) 
+
+all:
+	$(NAME)  $(COMPIL)
 
 clean:
 	rm -f $(NAME)
