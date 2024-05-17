@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:14:34 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/17 17:08:22 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/17 17:27:40 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,15 +54,19 @@ char	*ft_strtrim(char const *s1, char const *set)
 	s2 = malloc(sizeof(char)* ft_strlen(s1) + 1);
 	i = 0;
 	j = 0;
-	while(s1[i] && set[j])
+	while(set[j])
 	{
 		while (set[j] && s1[i])
 		{
 			if (set[j] && s1[i] && s1[i] != set[j])
 			{
 				ft_strlcat(s2, &s1[i], ft_strlen(s1));
+				i++;
 			}
-			i++;
+			else 
+				i= 0;
+
+
 		}
 		j++;
 		i = 0;
@@ -71,7 +75,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 int	main()
 {
-	const char *s1 = "abcadfeg";
-	const char *set = "a";
+	const char *s1 = "aadbcadfeg";
+	const char *set = "aa";
 	printf("%s", ft_strtrim(s1, set));
 }

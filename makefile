@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/05/16 16:54:42 by habouda          ###   ########.fr        #
+#    Updated: 2024/05/17 11:18:59 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,11 +53,10 @@ SRCS_BONUS	=	ft_lstnew.c \
 OBJS	= $(SRCS:.c=.o)
 OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 
-
-COMPIL = $(CC) $(CFLAGS) 
-
 all:
-	$(NAME)  $(COMPIL)
+	$(NAME)  
+
+NAME 
 
 clean:
 	rm -f $(NAME)
