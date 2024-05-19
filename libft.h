@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:55:55 by Habouda           #+#    #+#             */
-/*   Updated: 2024/05/19 04:23:23 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/19 14:30:47 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 # include <stdlib.h>
 # include <string.h>
 
-int		ft_isalnum(char c);
-int		ft_isalpha(char c);
+int		ft_isalnum(int c);
+int		ft_isalpha(int c);
 int		ft_isascii(int c);
-int		ft_isdigit(char c);
-int		ft_isprint(char c);
+int		ft_isdigit(int c);
+int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_strncmp(const char *str1, const char *str2, size_t length);

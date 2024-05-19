@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/05/19 04:22:59 by habouda          ###   ########.fr        #
+#    Updated: 2024/05/19 04:26:29 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean:	clean
-	rm -f $(OBJS) $(OBJS_BONUS)
+	rm -f $(NAME)
 
 re : fclean all
 
