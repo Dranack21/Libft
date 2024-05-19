@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 16:47:18 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/16 17:13:31 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/19 02:49:43 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ char	*ft_strdup(const char *source)
 		buffer[i] = source[i];
 		i++;
 	}
+	buffer[i] = '\0';
 	return (buffer);
 }
