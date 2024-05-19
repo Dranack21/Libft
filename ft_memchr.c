@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/11 00:33:49 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/20 00:23:58 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/20 00:39:52 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,8 +29,6 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	}
 	return (NULL);
 }
-
-
 
 /*Used *ptr_str and ptr_c to cast
  *str and c to unsigned char and use them since memory blocks
