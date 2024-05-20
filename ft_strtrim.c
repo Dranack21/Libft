@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/17 16:14:34 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/18 18:18:31 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/20 16:35:10 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,34 +45,48 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	return (src_len + dest_len);
 }
 
+int	count_charset(char const *s1, char const *set)
+{
+	int	i;
+	int	j;
+	int k;
+
+	i = 0;
+	j = 0;
+	k = 0;
+	while (s1[i] && set[k])
+	{
+		if (s1[i] != set[k])
+		{
+			j++;
+			k++;
+		}
+		i++;
+	}
+	return (j);
+}
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
 	char	*s2;
 
-	s2 = malloc(sizeof(char)* ft_strlen(s1) + 1);
 	i = 0;
 	j = 0;
-	while(set[j])
+	s2 = malloc(sizeof(char)*count_charset(s1,set) +1);
+	while(s1[i])
 	{
-		while (set[j] && s1[i])
-		{
-			if (set[j] && s1[i] && s1[i] != set[j])
+			if (s1[i] != set[i])
 			{
-				ft_strlcat(s2, &s1[i], ft_strlen(s1));
-				i++;
+				ft_strlcat(s2, &s1[i], 1);
 			}
-			else 
-				i= 0;
-		}
-		j++;
+			i++;
 	}
 	return (s2);
 }
 int	main()
 {
 	const char *s1 = "aadbcadfeg";
-	const char *set = "aa";
+	const char *set = "ag";
 	printf("%s", ft_strtrim(s1, set));
 }
