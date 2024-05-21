@@ -6,12 +6,11 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 12:10:23 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/21 16:36:43 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/21 19:35:39 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	n_size(int n)
 {
@@ -55,8 +54,7 @@ char	*ft_itoa(int n)
 		s[--k] = (nb % 10) + ('0');
 		nb = nb / 10;
 		if (nb == 0)
-			break;
+			break ;
 	}
 	return (s);
 }
-
