@@ -6,26 +6,12 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:36:25 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/21 16:40:27 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/21 16:54:30 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	in_charset(char *src, char *set)
-{
-	int	i;
 
-	i = 0;
-	while (set[i])
-	{
-		while (src[i] && src[i] == set[i])
-		{
-			i++;
-		}
-		return (1);
-	}
-	return (0)
-}
 
 
