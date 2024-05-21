@@ -5,88 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/17 16:14:34 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/20 16:35:10 by habouda          ###   ########.fr       */
+/*   Created: 2024/05/21 13:36:25 by habouda           #+#    #+#             */
+/*   Updated: 2024/05/21 16:40:27 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-
-size_t	ft_strlen(const char *str)
-{
-	int	i = 0;
-	while(str[i])
-	{
-		i++;
-	}
-	return (i);
-}
-
-
-size_t	ft_strlcat(char *dest, const char *src, size_t size)
-{
-	size_t	i;
-	size_t	dest_len;
-	size_t	src_len;
-
-	i = 0;
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
-	if (dest_len >= size)
-		return (src_len + size);
-	while (src[i] && i < size - dest_len - 1)
-	{
-		dest[dest_len + i] = src [i];
-		i++;
-	}
-	dest[i + dest_len] = '\0';
-	return (src_len + dest_len);
-}
-
-int	count_charset(char const *s1, char const *set)
+int	in_charset(char *src, char *set)
 {
 	int	i;
-	int	j;
-	int k;
 
 	i = 0;
-	j = 0;
-	k = 0;
-	while (s1[i] && set[k])
+	while (set[i])
 	{
-		if (s1[i] != set[k])
+		while (src[i] && src[i] == set[i])
 		{
-			j++;
-			k++;
-		}
-		i++;
-	}
-	return (j);
-}
-char	*ft_strtrim(char const *s1, char const *set)
-{
-	int		i;
-	int		j;
-	char	*s2;
-
-	i = 0;
-	j = 0;
-	s2 = malloc(sizeof(char)*count_charset(s1,set) +1);
-	while(s1[i])
-	{
-			if (s1[i] != set[i])
-			{
-				ft_strlcat(s2, &s1[i], 1);
-			}
 			i++;
+		}
+		return (1);
 	}
-	return (s2);
+	return (0)
 }
-int	main()
-{
-	const char *s1 = "aadbcadfeg";
-	const char *set = "ag";
-	printf("%s", ft_strtrim(s1, set));
-}
+
+

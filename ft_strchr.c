@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 03:07:48 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/19 03:49:09 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/21 16:44:49 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,11 @@ char	*ft_strchr(const char *str, int c)
 		str++;
 	}
 	return (0);
+}
+
+#include <stdio.h>
+
+int	main()
+{
+	printf("%s", ft_strchr("teste", 'e'));
 }
