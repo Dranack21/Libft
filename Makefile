@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/05/20 15:35:17 by habouda          ###   ########.fr        #
+#    Updated: 2024/05/21 13:09:17 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,7 @@ SRCS	=	ft_isalpha.c \
 		ft_striteri.c \
 		ft_split.c \
 		ft_strmapi.c \
+		ft_itoa.c \
 		ft_strncmp.c \
 		ft_memchr.c \
 		ft_strdup.c \

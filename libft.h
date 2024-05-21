@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:55:55 by Habouda           #+#    #+#             */
-/*   Updated: 2024/05/20 15:41:39 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/21 13:09:28 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char	*ft_strjoin(char const *s1, char const *s2);
 char	**ft_split(char const *s, char c);
-
+char	*ft_itoa(int n);
 #endif
