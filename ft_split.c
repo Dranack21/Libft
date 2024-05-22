@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:48:43 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/22 20:32:47 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/22 22:12:36 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strncpy(char *dest, const char *src, unsigned int n, char c)
 	return (dest);
 }
 
-
 int	char_pos(const char *str, char c)
 {
 	int	i;
@@ -40,71 +39,68 @@ int	char_pos(const char *str, char c)
 	{
 		i++;
 	}
-	while (str[i] == c && str[i])
-	{
-		i++;
-	}
 	return (i);
 }
 
-
-int	count_words(const char *str, char c)
+static int	count_words(const char *str, char c)
 {
-	int	i;
-	int	words;
+	int	in_word;
+	int	counter;
 
-	i = 0;
-	words = 0;
-	if (!str)
-		return (0);
-	while (str[i])
+	in_word = 0;
+	counter = 0;
+	while (*str)
 	{
-		while (str[i] && str[i] != c)
+		if (*str != c && !in_word)
 		{
-			i++;
+			in_word = 1;
+			counter++;
 		}
-			words++;
-			i++;
-		while (str[i] == c && str[i])
-			i++;
+		if (*str == c && in_word)
+			in_word = 0;
+		str++;
 	}
-	return (words);
+	return (counter);
+}
+
+char	*array(const char *s, char c)
+{
+	int		i;
+	char	*split;
+
+	i = char_pos (s, c);
+	split = malloc(sizeof(char) * (i + 1));
+	if (!split)
+	{
+		free (split);
+		return (NULL);
+	}
+	ft_strncpy(split, s, i, c);
+	split[i] = '\0';
+	return (split);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
-	int		i;
 	int		j;
 
-	if (!s)
-		return (NULL);
-	j = 0;
 	split = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
-	while (*s == c && *s)
-        s++;
-	while(*s)
+	j = 0;
+	while (*s)
 	{
-		i = char_pos (s, c);
-		split[j] = malloc(sizeof(char) * (i + 1));	
-		if (!split[j])
+		while (*s == c && *s)
+			s++;
+		if (*s)
 		{
-			free (split);
-			return (NULL);
+			split[j] = array(s, c);
+			if (!split[j++])
+				return (NULL);
+			s = s + char_pos(s, c);
 		}
-		ft_strncpy(split[j], s , i, c);
-		split[j++][i] = '\0';
-		s = s + i;
 	}
 	split[j] = NULL;
 	return (split);
 }
-
-/*int	main()
-{
-	
-	char * invalidReadCheck =  0;
-	printf("%s\n", ft_split(invalidReadCheck, 0)[0]);
-}*/
