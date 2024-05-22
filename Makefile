@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/05/21 20:47:53 by habouda          ###   ########.fr        #
+#    Updated: 2024/05/22 10:26:30 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRCS	=	ft_isalpha.c \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
+		ft_memmove.c \
 		ft_strlcpy.c \
 		ft_strlcat.c \
 		ft_substr.c \
