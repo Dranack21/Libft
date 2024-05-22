@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:48:43 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/22 17:17:07 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/22 20:32:47 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	char_pos(const char *str, char c)
 	{
 		i++;
 	}
-	while (str[i] == c)
+	while (str[i] == c && str[i])
 	{
 		i++;
 	}
@@ -77,11 +77,13 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
+	if (!s)
+		return (NULL);
 	j = 0;
 	split = malloc((count_words(s, c) + 1) * sizeof(char *));
 	if (!split)
 		return (NULL);
-	while (*s == c)
+	while (*s == c && *s)
         s++;
 	while(*s)
 	{
@@ -100,8 +102,9 @@ char	**ft_split(char const *s, char c)
 	return (split);
 }
 
-
 /*int	main()
 {
-	printf("%s\n", ft_split("", 'z')[0]);
+	
+	char * invalidReadCheck =  0;
+	printf("%s\n", ft_split(invalidReadCheck, 0)[0]);
 }*/
