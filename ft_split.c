@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:48:43 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/23 12:10:07 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/23 12:31:35 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,25 @@ static int	count_words(const char *str, char c)
 	return (counter);
 }
 
+void	ft_free(char **split, int j)
+{
+	int 	i;
+	int		k;
+
+	k = 0;
+	i = 0;
+	while (split[k] && k < j)
+	{
+		while (split[k][i])
+		{
+			free(split[i]);
+			i++;
+		}
+		free (split[k]);
+		k++;
+	}
+}
+
 char	*array(const char *s, char c)
 {
 	int		i;
@@ -79,8 +98,6 @@ char	*array(const char *s, char c)
 	split[i] = '\0';
 	return (split);
 }
-
-void	ft_free()
 
 char	**ft_split(char const *s, char c)
 {
@@ -100,8 +117,7 @@ char	**ft_split(char const *s, char c)
 			split[j] = array(s, c);
 			if (!split[j++])
 			{
-				while (split[j--])
-					free(split[j]);
+				ft_free(split, j - 1);
 				return (NULL);
 			}
 			s = s + char_pos(s, c);
