@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:48:43 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/23 10:40:15 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/23 12:10:07 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,8 @@ char	*array(const char *s, char c)
 	return (split);
 }
 
+void	ft_free()
+
 char	**ft_split(char const *s, char c)
 {
 	char	**split;
@@ -98,8 +100,7 @@ char	**ft_split(char const *s, char c)
 			split[j] = array(s, c);
 			if (!split[j++])
 			{
-				j = 0;
-				while (split[j++])
+				while (split[j--])
 					free(split[j]);
 				return (NULL);
 			}
