@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/05/23 11:21:24 by habouda          ###   ########.fr        #
+#    Updated: 2024/05/23 14:17:29 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,15 +55,8 @@ SRCS	=	ft_isalpha.c \
 		ft_calloc.c \
 
 
-SRCS_BONUS	=	ft_lstnew.c \
-			ft_lstadd_front.c \
-			ft_lstsize.c \
-			ft_lstlast.c \
-			ft_lstadd_back.c \
-			ft_lstdelone.c \
-			ft_lstclear.c \
-			ft_lstiter.c \
-			ft_lstmap.c \
+SRCS_BONUS	=	ft_lstnew.c 
+			
 
 ### OBJS ###########################################################################
 			
@@ -76,7 +69,7 @@ OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 all: $(NAME)  
 
 $(NAME): $(OBJS) 
-		ar rcs $(NAME) $(OBJS)
+		ar rcs $(NAME) $(OBJS) 
 		ranlib $(NAME)
 
 clean:
@@ -86,6 +79,11 @@ fclean:	clean
 	rm -f $(NAME)
 
 re : fclean all
+
+bonus : $(NAME) $(OBJS_BONUS)
+		ar rcs $(NAME) $(OBJS_BONUS) 
+		ranlib $(NAME)
+
 
 .PHONY : all re fclean clean
 

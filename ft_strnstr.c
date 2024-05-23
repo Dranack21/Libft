@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 11:36:49 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/22 23:02:23 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/23 12:34:40 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *str, const char *find, size_t slen)
 		return (str2);
 	while (str2[i] && i < slen)
 	{
-		while (temp[j] == str2[i] && temp[j] && str2[i] && i < slen)
+		while (temp[j] == str2[i] && temp[j] && str2[i] && i <= slen)
 		{
 			j++;
 			i++;

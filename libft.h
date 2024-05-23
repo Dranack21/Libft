@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:55:55 by Habouda           #+#    #+#             */
-/*   Updated: 2024/05/23 11:21:11 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/23 14:23:38 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
+
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+}	t_list;
 
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);
@@ -56,5 +62,7 @@ char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strrchr(const char *str, int c);
+
+t_list	*ft_lstnew(void *content);
 
 #endif
