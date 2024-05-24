@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:36:25 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/24 13:52:09 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/24 14:43:19 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char		*buffer;
 	size_t		length;
 
-	if (!s1 || !set)
-		return (NULL);
 	i = 0;
 	j = ft_strlen(s1);
+	if (!*s1)
+		return (ft_strdup(""));
 	while (s1[i] && ft_strchr(set, s1[i]))
 		i++;
 	while (j > i && ft_strchr(set, s1[j]))
