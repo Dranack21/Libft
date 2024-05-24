@@ -6,29 +6,11 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:48:43 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/23 12:31:35 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/24 12:20:14 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strncpy(char *dest, const char *src, unsigned int n, char c)
-{
-	unsigned int	i;
-
-	i = 0;
-	while (src[i] && i < n && src[i] != c)
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
-}
 
 int	char_pos(const char *str, char c)
 {
@@ -65,20 +47,17 @@ static int	count_words(const char *str, char c)
 
 void	ft_free(char **split, int j)
 {
-	int 	i;
 	int		k;
 
 	k = 0;
-	i = 0;
 	while (split[k] && k < j)
 	{
-		while (split[k][i])
+		while (split[k])
 		{
-			free(split[i]);
-			i++;
+			free(split[k]);
+			k++;
 		}
-		free (split[k]);
-		k++;
+		free (split);
 	}
 }
 
@@ -94,7 +73,7 @@ char	*array(const char *s, char c)
 		free (split);
 		return (NULL);
 	}
-	ft_strncpy(split, s, i, c);
+	ft_strlcpy(split, s, i + 1);
 	split[i] = '\0';
 	return (split);
 }
