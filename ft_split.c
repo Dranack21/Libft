@@ -6,13 +6,13 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:48:43 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/24 12:20:14 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/24 13:42:33 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	char_pos(const char *str, char c)
+static int	char_pos(const char *str, char c)
 {
 	int	i;
 
@@ -45,23 +45,20 @@ static int	count_words(const char *str, char c)
 	return (counter);
 }
 
-void	ft_free(char **split, int j)
+static void	ft_free(char **split)
 {
 	int		k;
 
 	k = 0;
-	while (split[k] && k < j)
+	while (split[k])
 	{
-		while (split[k])
-		{
-			free(split[k]);
-			k++;
-		}
-		free (split);
+		free(split[k]);
+		k++;
 	}
+	free (split);
 }
 
-char	*array(const char *s, char c)
+static char	*array(const char *s, char c)
 {
 	int		i;
 	char	*split;
@@ -96,7 +93,7 @@ char	**ft_split(char const *s, char c)
 			split[j] = array(s, c);
 			if (!split[j++])
 			{
-				ft_free(split, j - 1);
+				ft_free(split);
 				return (NULL);
 			}
 			s = s + char_pos(s, c);

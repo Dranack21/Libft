@@ -6,13 +6,13 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 12:10:23 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/21 19:35:39 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/24 13:41:00 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	n_size(int n)
+static int	n_size(int n)
 {
 	int	i;
 

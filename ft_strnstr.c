@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/16 11:36:49 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/24 12:01:50 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/24 13:57:09 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t slen)
 	}
 	return (NULL);
 }
-
