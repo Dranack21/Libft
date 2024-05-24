@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/20 11:21:08 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/23 12:06:12 by habouda          ###   ########.fr       */
+/*   Created: 2024/05/21 14:15:32 by emagnani          #+#    #+#             */
+/*   Updated: 2024/05/24 15:48:59 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,24 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
-	char	*dest;
+	size_t	j;
+	char	*substr;
 
-	i = 0;
-	if (ft_strlen(s) < len)
+	i = (size_t)start;
+	j = 0;
+	if (start >= ft_strlen(s))
+		return (ft_strdup(""));
+	if (len + start >= ft_strlen(s))
+		len = ft_strlen(s) - start;
+	substr = malloc((len + 1) * sizeof(char));
+	if (!substr)
+		return (NULL);
+	while (j < len)
 	{
-		dest = malloc(sizeof(char) * ft_strlen(s) + 1);
-		if (!dest)
-			return (NULL);
-	}
-	else
-	{
-		dest = malloc(sizeof(char) * len + 1);
-		if (!dest)
-			return (NULL);
-	}
-	while (i < len && start < ft_strlen(s))
-	{
-		dest[i] = s[start];
-		start++;
+		substr[j] = s[i];
 		i++;
+		j++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	substr[j] = '\0';
+	return (substr);
 }
