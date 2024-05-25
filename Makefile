@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/05/25 18:52:18 by habouda          ###   ########.fr        #
+#    Updated: 2024/05/26 00:08:36 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,6 +59,8 @@ SRCS_BONUS	=	ft_lstnew.c \
 				ft_lstsize.c \
 				ft_lstlast.c \
 				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
 
 ### OBJS ###########################################################################
 			
