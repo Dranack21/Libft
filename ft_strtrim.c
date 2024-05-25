@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/21 13:36:25 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/24 14:43:19 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/25 03:02:32 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,14 +46,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (j > i && ft_strchr(set, s1[j]))
 		j--;
 	length = j - i + 1;
+	if (j == i && (ft_strchr(set, s1[i])))
+		return (ft_strdup(""));
 	buffer = ft_calloc(sizeof(char) * (length + 1), 1);
 	if (!buffer)
 		return (NULL);
-	while (i > 0)
-	{
+	while (i-- > 0)
 		s1++;
-		i--;
-	}
 	ftf_strncpy(buffer, s1, length);
 	return (buffer);
 }
