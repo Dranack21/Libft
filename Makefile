@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/05/26 00:34:19 by habouda          ###   ########.fr        #
+#    Updated: 2024/05/27 14:26:12 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,15 +54,15 @@ SRCS	=	ft_isalpha.c \
 		ft_atoi.c \
 		ft_calloc.c \
 
-SRCS_BONUS	=	ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_lstdelone.c \
-				ft_lstclear.c \
-				ft_lstiter.c \
-				ft_lstmap.c \
+SRCS_BONUS	=	ft_lstnew_bonus.c \
+				ft_lstadd_front_bonus.c \
+				ft_lstsize_bonus.c \
+				ft_lstlast_bonus.c \
+				ft_lstadd_back_bonus.c \
+				ft_lstdelone_bonus.c \
+				ft_lstclear_bonus.c \
+				ft_lstiter_bonus.c \
+				ft_lstmap_bonus.c \
 
 ### OBJS ###########################################################################
 			
@@ -76,7 +76,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS) 
 		ar rcs $(NAME) $(OBJS) 
-		ranlib $(NAME)
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
@@ -86,11 +85,10 @@ fclean:	clean
 
 re : fclean all
 
-bonus : $(NAME) $(OBJS_BONUS)
-		ar rcs $(NAME) $(OBJS_BONUS) 
-		ranlib $(NAME)
+bonus :  $(OBJS) $(OBJS_BONUS) 
+		ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
 
 
-.PHONY : all re fclean clean
+.PHONY : all re fclean clean bonus
 
 

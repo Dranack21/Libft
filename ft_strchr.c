@@ -6,18 +6,18 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 03:07:48 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/22 22:22:25 by habouda          ###   ########.fr       */
+/*   Updated: 2024/05/27 14:08:50 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *str, int character)
+char	*ft_strchr(const char *str, int c)
 {
-	char	c;
+	char	character;
 
-	c = character;
-	if (c == '\0')
+	character = c;
+	if (character == '\0')
 	{
 		while (*str)
 			str++;
@@ -25,7 +25,7 @@ char	*ft_strchr(const char *str, int character)
 	}
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == character)
 			return ((char *)str);
 		str++;
 	}
