@@ -6,13 +6,15 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:55:55 by Habouda           #+#    #+#             */
-/*   Updated: 2024/07/03 19:29:50 by habouda          ###   ########.fr       */
+/*   Updated: 2024/07/03 19:37:10 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# endif
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
@@ -75,6 +77,7 @@ char	*ft_itoa(int n);
 char	**ft_split(char const *s, char c);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_strrchr(const char *s, int c);
+char	*get_next_line(int fd);
 
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);

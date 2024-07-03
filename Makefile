@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/07/03 19:27:04 by habouda          ###   ########.fr        #
+#    Updated: 2024/07/03 19:38:36 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,6 +56,7 @@ SRCS	=	ft_isalpha.c \
 		ft_printf.c \
 		ft_printf_utils.c \
 		ft_printf_utils2.c \
+		ft_get_next_line.c \
 
 SRCS_BONUS	=	ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
