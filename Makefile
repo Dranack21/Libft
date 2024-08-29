@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/07/03 19:38:36 by habouda          ###   ########.fr        #
+#    Updated: 2024/08/29 16:04:34 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,8 @@ SRCS	=	ft_isalpha.c \
 		ft_printf_utils.c \
 		ft_printf_utils2.c \
 		ft_get_next_line.c \
+		ft_atol.c \
+		ft_is_space.c \
 
 SRCS_BONUS	=	ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
@@ -79,7 +81,8 @@ OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 all: $(NAME)  
 
 $(NAME): $(OBJS) 
-		ar rcs $(NAME) $(OBJS) 
+		ar rcs $(NAME) $(OBJS)
+		@rm -f $(OBJS)
 
 clean:
 	rm -f $(OBJS) $(OBJS_BONUS)
