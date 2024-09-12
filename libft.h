@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:55:55 by Habouda           #+#    #+#             */
-/*   Updated: 2024/09/12 17:18:36 by habouda          ###   ########.fr       */
+/*   Updated: 2024/09/12 22:53:56 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int		ft_putnbr(int n);
 int		ft_putunbr(int n);
 int		ft_putstr(char *str);
 int		ft_pointer(void *ptr);
+int		ft_is_digit_or_float(char *str);
 
 long	ft_atol(const char *nptr);
 
