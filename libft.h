@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:55:55 by Habouda           #+#    #+#             */
-/*   Updated: 2024/08/29 16:04:20 by habouda          ###   ########.fr       */
+/*   Updated: 2024/09/12 17:18:36 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,9 @@ int		ft_putstr(char *str);
 int		ft_pointer(void *ptr);
 
 long	ft_atol(const char *nptr);
+
+double	ft_atof(const char *nptr);
+double	ft_atoi_part(const char *nptr, int *i);
 
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
