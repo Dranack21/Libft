@@ -6,9 +6,11 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 22:53:19 by habouda           #+#    #+#             */
-/*   Updated: 2024/09/12 22:54:01 by habouda          ###   ########.fr       */
+/*   Updated: 2024/09/12 22:55:03 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_is_digit_or_float(char *str)
 {
