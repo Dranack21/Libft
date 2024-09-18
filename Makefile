@@ -6,7 +6,7 @@
 #    By: habouda <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/28 01:37:02 by Habouda           #+#    #+#              #
-#    Updated: 2024/09/12 22:54:13 by habouda          ###   ########.fr        #
+#    Updated: 2024/09/18 19:47:22 by habouda          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,6 +61,7 @@ SRCS	=	ft_isalpha.c \
 		ft_is_space.c \
 		ft_atof.c \
 		ft_is_digit_or_float.c \
+		ft_free_array.c \
 
 SRCS_BONUS	=	ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
