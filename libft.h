@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 20:55:55 by Habouda           #+#    #+#             */
-/*   Updated: 2024/09/18 19:47:09 by habouda          ###   ########.fr       */
+/*   Updated: 2025/01/04 18:56:16 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		ft_putunbr(int n);
 int		ft_putstr(char *str);
 int		ft_pointer(void *ptr);
 int		ft_is_digit_or_float(char *str);
+int		count_words(const char *str, char c);
 
 long	ft_atol(const char *nptr);
 
