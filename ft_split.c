@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/22 14:48:43 by habouda           #+#    #+#             */
-/*   Updated: 2024/05/24 13:42:33 by habouda          ###   ########.fr       */
+/*   Updated: 2025/01/04 19:01:33 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,27 +22,6 @@ static int	char_pos(const char *str, char c)
 		i++;
 	}
 	return (i);
-}
-
-static int	count_words(const char *str, char c)
-{
-	int	word;
-	int	counter;
-
-	word = 0;
-	counter = 0;
-	while (*str)
-	{
-		if (*str != c && !word)
-		{
-			word = 1;
-			counter++;
-		}
-		if (*str == c && word)
-			word = 0;
-		str++;
-	}
-	return (counter);
 }
 
 static void	ft_free(char **split)
