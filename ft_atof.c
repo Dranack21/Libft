@@ -6,11 +6,9 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 17:15:34 by habouda           #+#    #+#             */
-/*   Updated: 2024/09/12 17:17:58 by habouda          ###   ########.fr       */
+/*   Updated: 2025/01/04 15:39:13 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 #include "libft.h"
 
@@ -61,4 +59,3 @@ double	ft_atof(const char *nptr)
 	}
 	return (result);
 }
-

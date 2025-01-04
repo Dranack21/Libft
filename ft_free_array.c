@@ -6,7 +6,7 @@
 /*   By: habouda <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 19:44:41 by habouda           #+#    #+#             */
-/*   Updated: 2024/09/18 19:50:16 by habouda          ###   ########.fr       */
+/*   Updated: 2025/01/04 15:38:31 by habouda          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,10 @@ void	ft_free_array(char *str[])
 	int	i;
 
 	i = 0;
-	while(str[i])
+	while (str[i])
 	{
 		free(str[i]);
 		i++;
 	}
+	free(str);
 }
